@@ -14,7 +14,14 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        <p>Hello</p>
+
+        {% block body %}
+        <div class="container">
+        <p>Hello new !</p>
+        {# <a href="{{ path('PRODUITS') }}">Produits</a> #}
+        <button onclick="window.location.href='{{ path('PRODUITS') }}'">Produits</button>
+        <div>
+        {% endblock %}
+        
     </body>
 </html>

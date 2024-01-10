@@ -1,7 +1,19 @@
 body {
     background-color: skyblue;
+
 }
 p {
     color: #E06512;
   }
-  
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    background-color: turquoise;
+}
