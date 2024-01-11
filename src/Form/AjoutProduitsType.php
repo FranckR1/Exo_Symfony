@@ -21,7 +21,7 @@ class AjoutProduitsType extends AbstractType
             ->add('dateajout')
             ->add('idCategories', EntityType::class, [
                 'class' => Categories::class,
-'choice_label' => 'id',
+                'choice_label' => 'nom',
             ])
         ;
     }
