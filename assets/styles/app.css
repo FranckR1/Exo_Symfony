@@ -1,31 +1,97 @@
+* {
+    margin: 5;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
 body {
-    background-color: skyblue;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: turquoise;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
-.Liste {
-    box-sizing: border-box;
-    width: 48%; /* Réglage pour que chaque bloc soit environ la moitié de la largeur */
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr auto auto; 
     padding: 15px;
-    background-color: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.Liste h3 {
-    font-size: 1.2rem; /* Taille de police plus petite pour le titre */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
     margin-bottom: 5px;
 }
 
-.Liste p {
-    margin: 0;
-    font-size: 0.9rem; /* Taille de police plus petite pour les paragraphes */
+.btn-primary {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button {
-    background-color: turquoise;
+.contenu {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.contenu label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contenu input,
+.contenu textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contenu button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contenu button:hover {
+    background-color: #45a049;
+}
+
+.titre, h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.index-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }

@@ -16,10 +16,10 @@
     <body>
 
         {% block body %}
+        <h1>Hello new !</h1>
         <div class="container">
-        <p>Hello new !</p>
         {% for produit in produits %}
-        <div class="Liste">
+        <div class="card">
             <h3>Nom : {{produit.nomproduits}}</h3>
             <p>Description : {{produit.description}}</p>
             <p>Nom de la categories : {{produit.idCategories.nom}}</p>
@@ -29,8 +29,10 @@
         </div>
         {% endfor %}
         {# <a href="{{ path('PRODUITS') }}">Produits</a> #}
-        <button onclick="window.location.href='{{ path('PRODUITS') }}'">Produits</button>
         <div>
+        <div class="text-center mt-4">
+        <button onclick="window.location.href='{{ path('PRODUITS') }}'">Produits</button>
+        </div>
         {% endblock %}
         
     </body>
