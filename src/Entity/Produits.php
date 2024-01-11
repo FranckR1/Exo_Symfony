@@ -32,6 +32,9 @@ class Produits
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_ajout = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Description = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -93,6 +96,18 @@ class Produits
     public function setDateAjout(\DateTimeInterface $date_ajout): static
     {
         $this->date_ajout = $date_ajout;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->Description;
+    }
+
+    public function setDescription(?string $Description): static
+    {
+        $this->Description = $Description;
 
         return $this;
     }
