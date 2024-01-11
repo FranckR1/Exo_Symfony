@@ -10,7 +10,6 @@
 
 <div class="container">
     <h1>Ajouter un Produit</h1>
-
     {{ form_start(formProduit) }}
     <p>{{ form_row(formProduit.nomproduits) }}</p>
     <p>{{ form_row(formProduit.description) }}</p>
@@ -20,6 +19,6 @@
     <p>{{ form_row(formProduit.idCategories) }}</p>
     <button type="submit">Ajouter</button>
     {{ form_end(formProduit) }}
-    <button onclick="window.location.href='{{ path('app_home_page') }}'">Retour</button>
 </div>
+<button onclick="window.location.href='{{ path('app_home_page') }}'">Retour</button>
 {% endblock %}
