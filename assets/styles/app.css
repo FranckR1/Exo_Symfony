@@ -1,17 +1,29 @@
 body {
     background-color: skyblue;
-
 }
-p {
-    color: #E06512;
-  }
 
 .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.Liste {
+    box-sizing: border-box;
+    width: 48%; /* Réglage pour que chaque bloc soit environ la moitié de la largeur */
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #ddd;
+}
+
+.Liste h3 {
+    font-size: 1.2rem; /* Taille de police plus petite pour le titre */
+    margin-bottom: 5px;
+}
+
+.Liste p {
+    margin: 0;
+    font-size: 0.9rem; /* Taille de police plus petite pour les paragraphes */
 }
 
 button {

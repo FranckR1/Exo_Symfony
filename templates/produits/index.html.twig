@@ -12,13 +12,14 @@
     <h1>Ajouter un Produit</h1>
 
     {{ form_start(formProduit) }}
-    {{ form_row(formProduit.nom_produits) }}
-    {{ form_row(formProduit.description) }}
-    {{ form_row(formProduit.prix) }}
-    {{ form_row(formProduit.quantity) }}
-    {{ form_row(formProduit.date_ajout) }}
-    {{ form_end(formProduit) }}
+    <p>{{ form_row(formProduit.nomproduits) }}</p>
+    <p>{{ form_row(formProduit.description) }}</p>
+    <p>{{ form_row(formProduit.prix) }}</p>
+    <p>{{ form_row(formProduit.quantity) }}</p>
+    <p>{{ form_row(formProduit.dateajout) }}</p>
+    <p>{{ form_row(formProduit.idCategories) }}</p>
     <button type="submit">Ajouter</button>
-
+    {{ form_end(formProduit) }}
+    <button onclick="window.location.href='{{ path('app_home_page') }}'">Retour</button>
 </div>
 {% endblock %}

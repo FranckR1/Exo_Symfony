@@ -17,11 +17,11 @@ class Produits
     private ?int $id = null;
 
     #[ORM\ManyToOne]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Categories $id_Categories = null;
+    #[ORM\JoinColumn(name:"idCategories", nullable: false)]
+    private ?Categories $idCategories = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $nom_produits = null;
+    #[ORM\Column(name:"nomproduits", length: 255)]
+    private ?string $nomproduits = null;
 
     #[ORM\Column]
     private ?float $prix = null;
@@ -29,8 +29,8 @@ class Produits
     #[ORM\Column]
     private ?int $quantity = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $date_ajout = null;
+    #[ORM\Column(name:"dateajout", type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dateajout = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Description = null;
@@ -42,24 +42,24 @@ class Produits
 
     public function getIdCategories(): ?Categories
     {
-        return $this->id_Categories;
+        return $this->idCategories;
     }
 
-    public function setIdCategories(?Categories $id_Categories): static
+    public function setIdCategories(?Categories $idCategories): static
     {
-        $this->id_Categories = $id_Categories;
+        $this->idCategories = $idCategories;
 
         return $this;
     }
 
     public function getNomProduits(): ?string
     {
-        return $this->nom_produits;
+        return $this->nomproduits;
     }
 
-    public function setNomProduits(string $nom_produits): static
+    public function setNomProduits(string $nomproduits): static
     {
-        $this->nom_produits = $nom_produits;
+        $this->nomproduits = $nomproduits;
 
         return $this;
     }
@@ -90,12 +90,12 @@ class Produits
 
     public function getDateAjout(): ?\DateTimeInterface
     {
-        return $this->date_ajout;
+        return $this->dateajout;
     }
 
-    public function setDateAjout(\DateTimeInterface $date_ajout): static
+    public function setDateAjout(\DateTimeInterface $dateajout): static
     {
-        $this->date_ajout = $date_ajout;
+        $this->dateajout = $dateajout;
 
         return $this;
     }

@@ -18,6 +18,16 @@
         {% block body %}
         <div class="container">
         <p>Hello new !</p>
+        {% for produit in produits %}
+        <div class="Liste">
+            <h3>Nom : {{produit.nomproduits}}</h3>
+            <p>Description : {{produit.description}}</p>
+            <p>Nom de la categories : {{produit.idCategories.nom}}</p>
+            <p>Date de l'ajout : {{produit.dateajout|date('d-m-Y')}}</p>
+            <p>Prix : {{produit.prix}}</p>
+            <p>Quantiter  : {{produit.quantity}}</p>
+        </div>
+        {% endfor %}
         {# <a href="{{ path('PRODUITS') }}">Produits</a> #}
         <button onclick="window.location.href='{{ path('PRODUITS') }}'">Produits</button>
         <div>

@@ -14,12 +14,12 @@ class AjoutProduitsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom_produits')
+            ->add('nomproduits')
             ->add('description')
             ->add('prix')
             ->add('quantity')
-            ->add('date_ajout')
-            ->add('id_Categories', EntityType::class, [
+            ->add('dateajout')
+            ->add('idCategories', EntityType::class, [
                 'class' => Categories::class,
 'choice_label' => 'id',
             ])
