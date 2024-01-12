@@ -13,7 +13,7 @@ use App\Form\AjoutProduitsType;
 
 class ProduitsController extends AbstractController
 {
-    #[Route('/produits', name: 'PRODUITS')]
+    #[Route('/produits', name: 'app_produits')]
 
    public function new(Request $request, ManagerRegistry $doctrine): Response {
     

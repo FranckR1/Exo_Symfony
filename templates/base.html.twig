@@ -14,7 +14,37 @@
         {% endblock %}
     </head>
     <body>
-
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">StockTrack</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            {% if app.user %}
+                                <li class="nav-item d-inline-block">
+                                    <a class="nav-link" href="{{ path('app_home_page') }}">Accueil</a>
+                                </li>
+                                <li class="nav-item d-inline-block">
+                                    <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                                </li>
+                                <li class="nav-item d-inline-block">
+                                    <a class="nav-link" href="{{ path('app_produits') }}">Ajouter un Produit</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item d-inline-block">
+                                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                                </li>
+                                <li class="nav-item d-inline-block">
+                                    <a class="nav-link" href="{{ path('app_register') }}">Inscription</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </body>
         {% block body %}
         <h1>Hello new !</h1>
         <div class="container">
@@ -30,10 +60,7 @@
         {% endfor %}
         {# <a href="{{ path('PRODUITS') }}">Produits</a> #}
         <div>
-        <div class="text-center mt-4">
-        <button onclick="window.location.href='{{ path('PRODUITS') }}'">Produits</button>
-        </div>
         {% endblock %}
         
-    </body>
+    
 </html>
